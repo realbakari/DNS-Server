@@ -9,9 +9,9 @@ class Blacklist(DNS):
     def newblacklist(self, IPA):
         self._domainsblacklist.add(IPA)
 
-    def  domainlookup(self, domain):
-        print(domain,self._IPAdict[domain],self._domainsblacklist)
-        if domain in self._IPAdict and self._IPAdict[domain] not in self._domainsblacklist:
-            return (self._IPAdict[domain])
+    def  domainlookup(self, domainName):
+        print(domainName,self.table[domainName],self._domainsblacklist)
+        if domainName in self.table and self.table[domainName] not in self._domainsblacklist:
+            return (self.table[domainName])
         else:
-            return ("None")
+            return ("None! ")
