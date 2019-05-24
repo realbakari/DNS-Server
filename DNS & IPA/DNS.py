@@ -29,4 +29,4 @@ class DNS:
     def update(self, old, new):
         return ("Domain name " +old+ " for IPA " + self.table[old] +" has been changed to ", new)
         self.table[new] = self.table[old]
-        del self._IPAdict[oldDomain]
+        del self.table[oldDomain]
